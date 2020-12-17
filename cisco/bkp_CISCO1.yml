@@ -1,0 +1,22 @@
+---
+- hosts: IOS
+  gather_facts: no
+  connection: local
+
+  tasks:
+   - name: OBTAIN LOGIN INFORMATION
+     include_vars: secrets.yml
+
+   - name: DEFINE PROVIDER
+     set_fact:
+       provider:
+         host: "{{ ansible_host }}"
+         username: "{{ creds['username'] }}"
+         password: "{{ creds['password'] }}"
+         auth_pass: "{{ creds['auth_pass'] }}"
+   - name: SAVE & BACKUP CONFIGURATION
+     ios_config:
+       provider: "{{ provider }}"
+       authorize: no
+       save_when: always
+       backup: yes
