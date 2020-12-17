@@ -1,0 +1,5 @@
+aragorn ansible_host=1.1.1.100
+#bilbo ansible_host=198.51.100.5 device_role=l2_switch
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3.6
