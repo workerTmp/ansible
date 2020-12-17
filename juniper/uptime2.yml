@@ -3,15 +3,15 @@
   hosts:
     - all
   roles:
-    - Juniper.junos
+    - Juniper.junos
   connection: local
   gather_facts: no
   vars_prompt:
     - name: username
-      prompt: Junos Username
+      prompt: Junos Username
       private: no
     - name: password
-      prompt: Junos Password
+      prompt: Junos Password
       private: yes
   tasks:
     - name: get uptime using galaxy module
