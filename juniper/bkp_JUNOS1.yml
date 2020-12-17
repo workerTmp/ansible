@@ -1,5 +1,5 @@
 ---
-- name:Save configurations from Junos devices to files
+- name: Save configurations from Junos devices to files
   hosts:
     - all
   roles:
