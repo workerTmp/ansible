@@ -1,0 +1,9 @@
+---
+user:
+  hosts:
+    user_R:
+      ansible_host: "1.1.1.1"
+  vars:
+    ansible_network_os: "ios"
+    ansible_ssh_user: admin
+    ansible_ssh_pass: admin
